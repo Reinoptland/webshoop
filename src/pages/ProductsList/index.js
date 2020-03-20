@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductsThunk } from "../../store/products/actions";
 import { selectProducts } from "../../store/products/selectors";
+import AddProduct from "../AddProduct";
 
 export default function ProductsList() {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ export default function ProductsList() {
   return (
     <div>
       PRODUCTLIST
+      <AddProduct />
       <div>
         {products.map(product => {
           return (

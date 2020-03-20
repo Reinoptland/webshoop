@@ -9,3 +9,9 @@ export const getProductsThunk = () => {
     dispatch({ type: "FETCH_PRODUCTS_SUCCESS", payload: response.data });
   };
 };
+
+export const postProductThunk = (name, description, price, imageUrl) => {
+  return async (dispatch, getState) => {
+    console.log(name, description, price, imageUrl);
+  };
+};

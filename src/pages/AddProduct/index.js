@@ -3,8 +3,12 @@ import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
+import { useDispatch } from "react-redux";
+import { postProductThunk } from "../../store/products/actions";
 
 export default function AddProduct() {
+  const dispatch = useDispatch();
+
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState(0);
@@ -13,6 +17,7 @@ export default function AddProduct() {
   function submitForm(event) {
     event.preventDefault();
     console.log(name, description, price, imageUrl);
+    dispatch(postProductThunk(name, description, price, imageUrl));
   }
 
   return (

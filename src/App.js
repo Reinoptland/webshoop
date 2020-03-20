@@ -8,6 +8,7 @@ import MessageBox from "./components/MessageBox";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import ProductsList from "./pages/ProductsList";
+import AddProduct from "./pages/AddProduct";
 
 import { useDispatch, useSelector } from "react-redux";
 import { selectAppLoading } from "./store/appState/selectors";
@@ -44,6 +45,7 @@ function App() {
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={Login} />
         <Route path="/products" component={ProductsList} />
+        <Route path="/addproduct" component={AddProduct} />
       </Switch>
     </div>
   );

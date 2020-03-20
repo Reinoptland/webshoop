@@ -23,6 +23,7 @@ export default function Navigation() {
         <Nav style={{ width: "100%" }} fill>
           <NavbarItem path="/" linkText="Home" />
           <NavbarItem path="/products" linkText="Buy stuff" />
+          <NavbarItem path="/addproduct" linkText="Add products" />
           {loginLogoutControls}
         </Nav>
       </Navbar.Collapse>
